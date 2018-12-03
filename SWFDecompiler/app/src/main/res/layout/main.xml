@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:text="SWF Decompiler"
+		android:id="@+id/mainTextViewTitle"
+		android:textSize="45sp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="SWF decompiler by KYHSGeekCode, using jindrapetrik's jpexs-decompiler at https://github.com/jindrapetrik/jpexs-decompiler/"
+		android:layout_below="@id/mainTextViewTitle"
+		android:id="@+id/mainTextView1"
+		android:textIsSelectable="true"/>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_below="@id/mainTextView1"
+		android:layout_margin="10dp"
+		android:id="@+id/mainLinearLayout1">
+
+		<EditText
+			android:inputType="textMultiLine"
+			android:layout_width="wrap_content"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:id="@+id/mainEditTextInput"
+			android:layout_weight="1.0"
+			android:text="Input file"/>
+
+		<Button
+			android:layout_height="match_parent"
+			android:layout_width="wrap_content"
+			android:text="Choose file"
+			android:id="@+id/mainButtonInput"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_margin="10dp"
+		android:layout_below="@id/mainLinearLayout1"
+		android:id="@+id/mainLinearLayout2">
+
+		<EditText
+			android:inputType="textMultiLine"
+			android:layout_width="wrap_content"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:id="@+id/mainEditTextOutput"
+			android:layout_weight="1.0"
+			android:text="Output folder"/>
+
+		<Button
+			android:layout_height="match_parent"
+			android:layout_width="wrap_content"
+			android:text="Choose Folder"
+			android:id="@+id/mainButtonOutput"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		android:layout_below="@id/mainLinearLayout2">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Options"/>
+
+	</LinearLayout>
+
+</RelativeLayout>
+
