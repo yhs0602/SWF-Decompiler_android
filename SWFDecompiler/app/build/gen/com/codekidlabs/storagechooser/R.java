@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.kyhsgeekcode.swfdecompiler;
+package com.codekidlabs.storagechooser;
 
 public final class R {
     public static final class anim {

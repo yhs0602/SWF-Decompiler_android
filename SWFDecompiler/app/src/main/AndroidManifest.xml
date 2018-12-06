@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kyhsgeekcode.swfdecompiler" >
-
+    package="com.kyhsgeekcode.swfdecompiler"
+	xmlns:tools="http://schemas.android.com/tools">
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+		tools:remove="android:maxSdkVersion" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+		tools:remove="android:maxSdkVersion"/>
+	<!--uses-permission android:name="android.permission.GET_ACCOUNTS" /-->
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
-		android:resizeableActivity = "true">
+		android:resizeableActivity = "true"
+		android:largeHeap="true">
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -16,7 +22,27 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+				<category android:name="android.intent.category.BROWSABLE"/>
+				<data android:scheme="content"/>
+				<data android:scheme="file"/>
+				<data android:mimeType="*/*"/>
+		    </intent-filter>
+			<!--intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:scheme="file" />
+				<data android:host="*" />
+				<data android:pathPattern="*" />
+			</intent-filter-->
         </activity>
+		<!--activity android:name=".SettingsActivity"/-->
+		<!--activity android:name=".MadeByActivity"/-->
+		<!--activity android:name=".OpenSourceActivity"/-->
+		<!--activity android:name=".FileSelectorActivity"/-->
+
     </application>
 
 </manifest>

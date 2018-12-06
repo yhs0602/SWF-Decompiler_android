@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="predefinedcolor">
+        <item>Original</item>
+        <item>Hacker</item>
+        <item>OllyDbg</item>
+    </string-array>
+    <string-array name="predefinedcolor_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

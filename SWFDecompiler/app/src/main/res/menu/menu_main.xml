@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+        android:id="@+id/jumpto"
+        android:title="goto"/>
+	<!--item
+        android:id="@+id/findsymbol"
+        android:title="Find symbol"/-->
+	<item
+        android:id="@+id/save"
+        android:title="save"/>
+	<item
+        android:id="@+id/export"
+        android:title="export project as zip"/>
+    <!--item
+        android:id="@+id/rows"
+        android:title="rows"/-->
+	<item
+        android:id="@+id/settings"
+        android:title="Settings / Help"/>
+	
+</menu>

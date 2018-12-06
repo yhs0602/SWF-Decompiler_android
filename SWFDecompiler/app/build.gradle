@@ -1,24 +1,35 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.0"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
 
     defaultConfig {
         applicationId "com.kyhsgeekcode.swfdecompiler"
-        minSdkVersion 14
-        targetSdkVersion 21
+        minSdkVersion 25
+        targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
-    }
+        versionName "1.0"	
+	}
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+	dexOptions {
+		incremental true
+	}
+	
 }
 
 dependencies {
+	compile 'com.android.support:appcompat-v7:25.+'
+	compile 'com.github.codekidX:storage-chooser:2.0'
+	//compile 'com.github.skydoves:colorpickerpreference:1.0.5'
+	//compile 'com.github.skydoves:colorpickerview:2.0.1'
+	//compile 'com.android.support:support-v4:27.+'
+	//compile 'com.evrencoskun.library:tableview:0.8.8' 
     compile fileTree(dir: 'libs', include: ['*.jar'])
+	
 }
